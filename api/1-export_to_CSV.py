@@ -1,5 +1,6 @@
-#!/usr/bin/python3
-
+#!/usr/bin/python
+"""Module to export employee data into CSV file
+"""
 import sys
 import requests
 import csv

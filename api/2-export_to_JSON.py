@@ -28,7 +28,7 @@ if __name__ == "__main__":
             "username": employee_data["username"]
         }
         tasks.append(task_info)
-    
+
     #  create dictionary where key = userID and value is list of tasks
     user_tasks_dict = {sys.argv[1]: tasks}
 

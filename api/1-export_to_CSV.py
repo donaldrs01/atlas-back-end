@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """Module to export employee data into CSV file
 """
-import sys
-import requests
 import csv
+import requests
+import sys
+
 
 if __name__ == "__main__":
 

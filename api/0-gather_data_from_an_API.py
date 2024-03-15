@@ -18,6 +18,21 @@ def employee_todo_list(id):
     employee_data = employee_response.json()
     employee_name = employee_data.get('name')
 
+    todos_response = requests.get(todo_url, params={'userID': id})
+    todos_data = todos_response.json()
+
+    #  count completed tasks
+    completed_tasks = [todo['title'] for todo in todos_data if todo['complete']]
+
+    print(f'Employee {employee_name} is done with tasks ({len(completed_tasks)}/{len(todos_data)}):')
+    for task_title in completed_tasks:
+        print(f'\t{task_title}')
+    
+
+    if __name__ == "__main__":
+        employee_todo_list(int(sys.argv[1]))
+
+
 
 
 

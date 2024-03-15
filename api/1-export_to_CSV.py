@@ -21,12 +21,6 @@ if __name__ == "__main__":
 
     with open(file_name, "w", newline='') as file:
         csv_file = csv.writer(file)
-        csv_file.writerow([
-            'USER_ID',
-            'USERNAME',
-            'TASK_COMPLETED_STATUS',
-            'TASK_TITLE'
-        ])
         for todo in todos:
             csv_file.writerow([
                 todo["userId"],

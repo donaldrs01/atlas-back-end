@@ -6,6 +6,7 @@ TODO list based on their ID input
 import requests
 import sys
 
+
 def employee_todo_list(id):
     """Interacts with API and retrieves employee information based off ID"""
 
@@ -22,17 +23,13 @@ def employee_todo_list(id):
     todos_data = todos_response.json()
 
     #  count completed tasks
-    completed_tasks = [todo['title'] for todo in todos_data if todo['completed']]
+    done_tasks = [todo['title'] for todo in todos_data if todo['completed']]
 
-    print(f'Employee {employee_name} is done with tasks ({len(completed_tasks)}/{len(todos_data)}):')
-    for task_title in completed_tasks:
+    print(f'Employee {employee_name} is done with tasks \
+          ({len(done_tasks)}/{len(todos_data)}):')
+    for task_title in done_tasks:
         print(f'\t{task_title}')
-        
-        
+
+
 if __name__ == "__main__":
     employee_todo_list(int(sys.argv[1]))
-
-
-
-
-

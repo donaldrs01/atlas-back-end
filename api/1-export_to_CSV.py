@@ -29,7 +29,7 @@ if __name__ == "__main__":
         for todo in todos:
             csv_file.writerow([
                 todo["userId"],
-                employee_data["name"],
+                employee_data["username"],
                 todo["completed"],
                 todo["title"]
                 ])

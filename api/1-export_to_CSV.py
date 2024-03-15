@@ -28,8 +28,8 @@ if __name__ == "__main__":
         ])
         for todo in todos:
             csv_file.writerow([
-                todo['userId'],
-                employee_data['name'],
-                todo['completed'],
-                todo['title']
+                todo["userId"],
+                employee_data["name"],
+                todo["completed"],
+                todo["title"]
                 ])
